@@ -1,0 +1,16 @@
+import { LOAD_DRIVERS } from "../constants/action-types";
+
+const initialState = { drivers: [] };
+
+const driversReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case LOAD_DRIVERS:
+            return Object.assign({}, state, {
+                drivers: action.payload
+            });
+        default:
+            return state;
+    }
+};
+
+export default driversReducer;
