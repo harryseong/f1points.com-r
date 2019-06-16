@@ -1,0 +1,47 @@
+@import "../../constants/style-constants.scss";
+
+.root {
+  flexgrow: 1;
+}
+
+.driver-card {
+  padding: 10px;
+  background-color: rgb(51, 51, 51);
+  border-radius: 3px;
+
+  .driver-img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: $imgBoxShadow;
+  }
+
+  .driver-details {
+    padding: 0 10px;
+    display: inline-block;
+    vertical-align: top;
+
+    .driver-name {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .driver-nationality,
+    .driver-dob,
+    .driver-more-info-link {
+      font-size: 14px;
+      font-weight: 400;
+
+      a,
+      a:visited {
+        color: white;
+        transition: 0.2s;
+      }
+
+      a:hover {
+        color: rgb(236, 236, 236);
+        transition: 0.2s;
+      }
+    }
+  }
+}

@@ -15,7 +15,7 @@ class ConnectedNavbar extends Component {
       <nav className="navbar">
         <div className="logo">F1 Points</div>
 
-        <ul className="navLinks">
+        <ul>
           <li>
             <Link to="/">Dashboard</Link>
           </li>

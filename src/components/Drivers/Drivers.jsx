@@ -1,39 +1,56 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import Grid from "@material-ui/core/Grid";
+import "./Drivers.scss";
 
 const mapStateToProps = state => {
-    return { drivers: state.drivers.drivers };
+  return { drivers: state.drivers.drivers };
 };
 
 class ConnectedDrivers extends Component {
-    render() {
-        const drivers = this.props.drivers;
+  render() {
+    const drivers = this.props.drivers;
 
-        return (
-            <div>
-                <h1>Drivers</h1>
+    return (
+      <div>
+        <h1>Drivers</h1>
 
-                {drivers.map(driver => (
-                    <div key={driver.driverId}>
-                        <h4>
-                            {driver.givenName} {driver.familyName}
-                        </h4>
-                        <div>Nationality: {driver.nationality}</div>
-                        <div>Date of Birth: {driver.dateOfBirth}</div>
-                        <div>
-                            <a
-                                href={driver.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Driver Info
-                            </a>
-                        </div>
+        <div className="root">
+          <Grid
+            container
+            direction="row"
+            justify="start"
+            alignItems="center"
+            spacing={1}
+          >
+            {drivers.map(driver => (
+              <Grid item xs={12} sm={6} md={4} key={driver.driverId}>
+                <div className="driver-card">
+                  <img
+                    className="driver-img"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvg0JBkqIduSMKCqEHjI-c2-wXggBXE-Rs6MGrYBB0bwoAMXLe"
+                    alt=""
+                  />
+                  <div className="driver-details">
+                    <div className="driver-name">
+                      {driver.givenName} {driver.familyName}
                     </div>
-                ))}
-            </div>
-        );
-    }
+                    <div className="driver-nationality">
+                      {driver.nationality}
+                    </div>
+                    <div className="driver-dob">{driver.dateOfBirth}</div>
+                    <div className="driver-more-info-link">
+                      <a href={driver.url}>More driver info</a>
+                    </div>
+                  </div>
+                </div>
+              </Grid>
+            ))}
+          </Grid>
+        </div>
+      </div>
+    );
+  }
 }
 
 const Drivers = connect(mapStateToProps)(ConnectedDrivers);
