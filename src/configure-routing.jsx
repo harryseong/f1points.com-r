@@ -6,12 +6,12 @@ import Navbar from "./components/Navbar/Navbar";
 import Constructors from "./components/Constructors/Constructors";
 
 export const routing = (
-    <Router>
-        <Navbar />
-        <div>
-            <Route exact path="/" component={Dashboard} />
-            <Route path="/drivers" component={Drivers} />
-            <Route path="/constructors" component={Constructors} />
-        </div>
-    </Router>
+  <Router>
+    <Navbar />
+    <div className="content">
+      <Route exact path="/" component={Dashboard} />
+      <Route path="/drivers" component={Drivers} />
+      <Route path="/constructors" component={Constructors} />
+    </div>
+  </Router>
 );

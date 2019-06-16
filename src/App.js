@@ -27,11 +27,7 @@ class ConnectedApp extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <div>{routing}</div>
-      </div>
-    );
+    return <div>{routing}</div>;
   }
 }
 
