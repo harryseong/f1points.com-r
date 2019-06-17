@@ -30,8 +30,13 @@ class ConnectedDrivers extends Component {
                 <div className="driver-card">
                   <img
                     className="driver-img"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvg0JBkqIduSMKCqEHjI-c2-wXggBXE-Rs6MGrYBB0bwoAMXLe"
-                    alt=""
+                    src={
+                      process.env.PUBLIC_URL +
+                      "/assets/images/drivers/" +
+                      driver.driverId +
+                      ".jpg"
+                    }
+                    alt="driver-img"
                   />
                   <div className="driver-details">
                     <div className="driver-name">

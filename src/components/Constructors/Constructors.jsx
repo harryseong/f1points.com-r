@@ -29,7 +29,12 @@ class ConnectedConstructors extends Component {
                 <div className="constructor-card">
                   <img
                     className="constructor-img"
-                    src="https://www.formula1.com/content/fom-website/en/teams/Renault/_jcr_content/logo.img.jpg/1546853275141.jpg"
+                    src={
+                      process.env.PUBLIC_URL +
+                      "/assets/images/constructors/" +
+                      constructor.constructorId +
+                      ".jpg"
+                    }
                     alt="constructor-img"
                   />
                   <div className="constructor-details">
