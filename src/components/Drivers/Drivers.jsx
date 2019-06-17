@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Grid from "@material-ui/core/Grid";
 import "./Drivers.scss";
 import { nationCodes } from "../../constants/nation-codes";
+var moment = require("moment");
 
 const mapStateToProps = state => {
   return { drivers: state.drivers.drivers };
@@ -50,7 +51,22 @@ class ConnectedDrivers extends Component {
                         {driver.nationality}
                       </div>
                     </div>
-                    <div className="driver-dob">{driver.dateOfBirth}</div>
+                    <div className="driver-dob">
+                      {moment(driver.dateOfBirth, "YYYY-MM-DD").format(
+                        "M/DD/YY"
+                      )}{" "}
+                      (
+                      {Math.floor(
+                        moment
+                          .duration(
+                            moment().diff(
+                              moment(driver.dateOfBirth, "YYYY-MM-DD")
+                            )
+                          )
+                          .as("years")
+                      )}
+                      )
+                    </div>
                     <div className="driver-more-info-link">
                       <a href={driver.url}>More driver info</a>
                     </div>

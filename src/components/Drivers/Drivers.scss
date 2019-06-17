@@ -1,7 +1,7 @@
 @import "../../constants/style-constants.scss";
 
 .root {
-  flexgrow: 1;
+  flex-grow: 1;
 }
 
 .driver-card {
@@ -46,12 +46,11 @@
 
     .driver-nationality {
       display: inline-block;
-      vertical-align: baseline;
+      vertical-align: top;
     }
 
     .nation-flag {
-      vertical-align: baseline;
-      width: 30px;
+      height: 20px;
     }
   }
 }
