@@ -1,5 +1,3 @@
-import { constructorColors } from "../../../constants/constructor-colors";
-
 export const createChartConfig = (dataset, labelset, colorset, color2set) => {
   return {
     type: "horizontalBar",
@@ -14,10 +12,18 @@ export const createChartConfig = (dataset, labelset, colorset, color2set) => {
           borderWidth: 1
         }
       ],
-      xAxisID: "Driver",
-      yAxisID: "Points"
+      xAxisID: "points",
+      yAxisID: "drivers"
     },
     options: {
+      plugins: {
+        datalabels: {
+          color: "#ffffff",
+          font: {
+            weight: "700"
+          }
+        }
+      },
       title: {
         display: true,
         text: "Driver Standings",
@@ -36,15 +42,14 @@ export const createChartConfig = (dataset, labelset, colorset, color2set) => {
           {
             scaleLabel: {
               display: true,
-              labelString: "Driver"
+              labelString: "Points"
             }
           }
         ],
         yAxes: [
           {
             scaleLabel: {
-              display: true,
-              labelString: "Points"
+              display: false
             },
             ticks: {
               beginAtZero: true

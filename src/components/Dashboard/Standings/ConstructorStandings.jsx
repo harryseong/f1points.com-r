@@ -1,32 +1,19 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
-const mapStateToProps = state => {
-  return { standings: state.standings.standings };
-};
+import ConstructorStandingsChart from "../../Charts/ConstructorStandingsChart/ConstructorStandingsChart";
 
 class ConnectedConstructorStandings extends Component {
   render() {
-    const standings = this.props.standings;
     return (
       <div>
         <h3>Constructor Standings</h3>
 
-        {standings.constructors.map(standing => (
-          <div key={standing.Constructor.constructorId}>
-            <h4>{standing.Constructor.name}</h4>
-            <div>Position: {standing.position}</div>
-            <div>Points: {standing.points}</div>
-            <div>Wins: {standing.wins}</div>
-          </div>
-        ))}
+        <ConstructorStandingsChart />
       </div>
     );
   }
 }
 
-const ConstructorStandings = connect(mapStateToProps)(
-  ConnectedConstructorStandings
-);
+const ConstructorStandings = connect()(ConnectedConstructorStandings);
 
 export default ConstructorStandings;

@@ -27,14 +27,14 @@ class ConnectedDriverStandingsChart extends Component {
     let colorset = [];
     let color2set = [];
 
-    this.props.standings.map(standing => {
+    for (const standing of this.props.standings) {
       dataset.push(parseInt(standing.points));
       labelset.push(
         standing.Driver.givenName + " " + standing.Driver.familyName
       );
       colorset.push(colors[standing.Constructors[0].constructorId].color);
       color2set.push(colors[standing.Constructors[0].constructorId].color2);
-    });
+    }
 
     const chartConfig = createChartConfig(
       dataset,
@@ -50,11 +50,9 @@ class ConnectedDriverStandingsChart extends Component {
   render() {
     return (
       <div>
-        <h4>Driver Standings Chart</h4>
-
         <canvas
           ref={chart => (this.chartCanvas = chart)}
-          width="400"
+          width="300"
           height="100"
         />
       </div>

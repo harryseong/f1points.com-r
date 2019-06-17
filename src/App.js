@@ -8,6 +8,7 @@ import {
   getDriverStandings,
   getConstructorStandings
 } from "./actions/standings";
+import ChartDataLabels from "chartjs-plugin-datalabels";
 
 const mapDispatchToProps = dispatch => {
   return {

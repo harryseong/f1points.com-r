@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import Grid from "@material-ui/core/Grid";
 import "./Drivers.scss";
+import { nationCodes } from "../../constants/nation-codes";
 
 const mapStateToProps = state => {
   return { drivers: state.drivers.drivers };
@@ -35,8 +36,19 @@ class ConnectedDrivers extends Component {
                     <div className="driver-name">
                       {driver.givenName} {driver.familyName}
                     </div>
-                    <div className="driver-nationality">
-                      {driver.nationality}
+                    <div className="driver-nationality-div">
+                      <img
+                        className="nation-flag"
+                        src={
+                          "https://www.countryflags.io/" +
+                          nationCodes[driver.nationality] +
+                          "/flat/64.png"
+                        }
+                        alt={driver.nationality}
+                      />{" "}
+                      <div className="driver-nationality">
+                        {driver.nationality}
+                      </div>
                     </div>
                     <div className="driver-dob">{driver.dateOfBirth}</div>
                     <div className="driver-more-info-link">
