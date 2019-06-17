@@ -30,7 +30,11 @@ class ConnectedDriverStandingsChart extends Component {
     for (const standing of this.props.standings) {
       dataset.push(parseInt(standing.points));
       labelset.push(
-        standing.Driver.givenName + " " + standing.Driver.familyName
+        standing.position +
+          ". " +
+          standing.Driver.givenName +
+          " " +
+          standing.Driver.familyName
       );
       colorset.push(colors[standing.Constructors[0].constructorId].color);
       color2set.push(colors[standing.Constructors[0].constructorId].color2);

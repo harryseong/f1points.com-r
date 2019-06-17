@@ -29,7 +29,7 @@ class ConnectedConstructorStandingsChart extends Component {
 
     for (const standing of this.props.standings) {
       dataset.push(parseInt(standing.points));
-      labelset.push(standing.Constructor.name);
+      labelset.push(standing.position + ". " + standing.Constructor.name);
       colorset.push(colors[standing.Constructor.constructorId].color);
       color2set.push(colors[standing.Constructor.constructorId].color2);
     }
