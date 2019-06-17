@@ -21,9 +21,9 @@ class ConnectedDrivers extends Component {
           <Grid
             container
             direction="row"
-            justify="start"
+            justify="flex-start"
             alignItems="center"
-            spacing={1}
+            spacing={2}
           >
             {drivers.map(driver => (
               <Grid item xs={12} sm={6} md={4} key={driver.driverId}>

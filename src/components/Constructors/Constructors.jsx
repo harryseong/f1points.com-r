@@ -20,7 +20,7 @@ class ConnectedConstructors extends Component {
           <Grid
             container
             direction="row"
-            justify="start"
+            justify="flex-start"
             alignItems="center"
             spacing={1}
           >
