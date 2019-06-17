@@ -47,12 +47,8 @@ class ConnectedConstructorStandingsChart extends Component {
 
   render() {
     return (
-      <div>
-        <canvas
-          ref={chart => (this.chartCanvas = chart)}
-          width="300"
-          height="100"
-        />
+      <div className="chart-div">
+        <canvas height="500" ref={chart => (this.chartCanvas = chart)} />
       </div>
     );
   }

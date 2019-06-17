@@ -16,6 +16,7 @@ export const createChartConfig = (dataset, labelset, colorset, color2set) => {
       yAxisID: "constructors"
     },
     options: {
+      maintainAspectRatio: false,
       plugins: {
         datalabels: {
           color: "#ffffff",
@@ -43,6 +44,9 @@ export const createChartConfig = (dataset, labelset, colorset, color2set) => {
             scaleLabel: {
               display: true,
               labelString: "Points"
+            },
+            gridLines: {
+              color: "#ffffff20"
             }
           }
         ],
@@ -53,6 +57,9 @@ export const createChartConfig = (dataset, labelset, colorset, color2set) => {
             },
             ticks: {
               beginAtZero: true
+            },
+            gridLines: {
+              color: "#ffffff20"
             }
           }
         ]
