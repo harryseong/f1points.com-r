@@ -1,0 +1,35 @@
+[debug] [2019-06-17T13:48:01.169Z] ----------------------------------------------------------------------
+[debug] [2019-06-17T13:48:01.172Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-06-17T13:48:01.172Z] CLI Version:   7.0.0
+[debug] [2019-06-17T13:48:01.172Z] Platform:      darwin
+[debug] [2019-06-17T13:48:01.172Z] Node Version:  v11.13.0
+[debug] [2019-06-17T13:48:01.174Z] Time:          Mon Jun 17 2019 08:48:01 GMT-0500 (Central Daylight Time)
+[debug] [2019-06-17T13:48:01.174Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-17T13:48:01.184Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-17T13:48:01.184Z] > authorizing via signed-in user
+[debug] [2019-06-17T13:48:01.184Z] [iam] checking project f1points for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-17T13:48:01.186Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-06-17T13:48:01.186Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-06-17T13:48:01.463Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-17T13:48:01.489Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/f1points:testIamPermissions  
+
+[debug] [2019-06-17T13:48:01.637Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-17T13:48:01.640Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/f1points  
+ 
+[debug] [2019-06-17T13:48:02.328Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'f1points'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-17T13:48:02.333Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/f1points/versions  
+
+[debug] [2019-06-17T13:48:03.335Z] <<< HTTP RESPONSE 200
+[info] i  hosting[f1points]: beginning deploy...
+[info] i  hosting[f1points]: found 44 files in build
+[debug] [2019-06-17T13:48:03.350Z] [hosting] hash cache [YnVpbGQ] load error: lines is not defined
+[debug] [2019-06-17T13:48:03.737Z] [hosting] hash cache [YnVpbGQ] stored for 44 files
+[debug] [2019-06-17T13:48:03.738Z] [hosting][hash queue][FINAL]
+[debug] [2019-06-17T13:48:03.738Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/f1points/versions/6b500a8491fdc21b:populateFiles  
+ <request body omitted>
