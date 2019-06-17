@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./Constructors.scss";
 import Grid from "@material-ui/core/Grid";
+import { nationCodes } from "../../constants/nation-codes";
 
 const mapStateToProps = state => {
   return { constructors: state.constructors.constructors };
@@ -33,8 +34,19 @@ class ConnectedConstructors extends Component {
                   />
                   <div className="constructor-details">
                     <div className="constructor-name">{constructor.name}</div>
-                    <div className="constructor-nationality">
-                      {constructor.nationality}
+                    <div className="driver-nationality-div">
+                      <img
+                        className="nation-flag"
+                        src={
+                          "https://www.countryflags.io/" +
+                          nationCodes[constructor.nationality] +
+                          "/flat/64.png"
+                        }
+                        alt={constructor.nationality}
+                      />{" "}
+                      <div className="constructor-nationality">
+                        {constructor.nationality}
+                      </div>
                     </div>
                     <div className="constructor-more-info-link">
                       <a href={constructor.url}>More constructor info</a>

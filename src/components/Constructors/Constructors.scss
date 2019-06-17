@@ -41,5 +41,15 @@
         transition: 0.2s;
       }
     }
+
+    .constructor-nationality {
+      display: inline-block;
+      vertical-align: baseline;
+    }
+
+    .nation-flag {
+      vertical-align: baseline;
+      width: 30px;
+    }
   }
 }

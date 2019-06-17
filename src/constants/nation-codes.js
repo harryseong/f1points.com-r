@@ -1,5 +1,7 @@
 export const nationCodes = {
+  American: "us",
   Australian: "au",
+  Austrian: "at",
   British: "gb",
   Canadian: "ca",
   Danish: "dk",
