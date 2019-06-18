@@ -4,26 +4,16 @@ import {
 } from "../constants/action-types";
 
 const initialState = {
-  standings: {
-    drivers: [],
-    constructors: []
-  }
+  drivers: [],
+  constructors: []
 };
 
 const standingsReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_DRIVER_STANDINGS:
-      return Object.assign({}, state, {
-        standings: Object.assign({}, state.standings, {
-          drivers: action.payload
-        })
-      });
+      return Object.assign({}, state, { drivers: action.payload });
     case LOAD_CONSTRUCTOR_STANDINGS:
-      return Object.assign({}, state, {
-        standings: Object.assign({}, state.standings, {
-          constructors: action.payload
-        })
-      });
+      return Object.assign({}, state, { constructors: action.payload });
     default:
       return state;
   }

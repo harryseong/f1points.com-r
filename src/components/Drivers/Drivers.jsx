@@ -39,8 +39,10 @@ class ConnectedDrivers extends Component {
                     alt="driver-img"
                   />
                   <div className="driver-details">
-                    <div className="driver-name">
-                      {driver.givenName} {driver.familyName}
+                    <div className="driver-name-number-div">
+                      <div className="driver-name">
+                        {driver.givenName} {driver.familyName}
+                      </div>
                     </div>
                     <div className="driver-nationality-div">
                       <img
@@ -58,7 +60,7 @@ class ConnectedDrivers extends Component {
                     </div>
                     <div className="driver-dob">
                       {moment(driver.dateOfBirth, "YYYY-MM-DD").format(
-                        "M/DD/YY"
+                        "M/DD/YYYY"
                       )}{" "}
                       (
                       {Math.floor(
@@ -73,9 +75,13 @@ class ConnectedDrivers extends Component {
                       )
                     </div>
                     <div className="driver-more-info-link">
-                      <a href={driver.url}>More driver info</a>
+                      <a href={driver.url} target="_blank_">
+                        More info
+                      </a>
                     </div>
                   </div>
+
+                  <div className="driver-number">#{driver.permanentNumber}</div>
                 </div>
               </Grid>
             ))}

@@ -6,7 +6,7 @@ var Chart = require("chart.js");
 
 const mapStateToProps = state => {
   return {
-    standings: state.standings.standings.drivers
+    standings: state.standings.drivers
   };
 };
 

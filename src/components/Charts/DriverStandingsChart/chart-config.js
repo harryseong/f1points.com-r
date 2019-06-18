@@ -28,7 +28,8 @@ export const createChartConfig = (dataset, labelset, colorset, color2set) => {
       title: {
         display: true,
         text: "Driver Standings",
-        fontSize: 14
+        fontSize: 14,
+        defaultFontFamily: "Montserrat"
       },
       legend: {
         display: false

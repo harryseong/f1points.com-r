@@ -22,11 +22,13 @@ class ConnectedConstructors extends Component {
             direction="row"
             justify="flex-start"
             alignItems="center"
-            spacing={1}
+            spacing={2}
           >
             {constructors.map(constructor => (
               <Grid item xs={12} sm={6} md={4} key={constructor.constructorId}>
-                <div className="constructor-card">
+                <div
+                  className={"constructor-card " + constructor.constructorId}
+                >
                   <img
                     className="constructor-img"
                     src={

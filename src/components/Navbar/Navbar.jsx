@@ -13,11 +13,17 @@ class ConnectedNavbar extends Component {
   render() {
     return (
       <nav className="navbar">
-        <div className="logo">F1 Points</div>
+        <img
+          className="logo"
+          src={
+            process.env.PUBLIC_URL + "/assets/images/f1points_logo_full_2.png"
+          }
+          alt="f1points_logo"
+        />
 
         <ul>
           <li>
-            <Link to="/">Dashboard</Link>
+            <Link to="/">Standings</Link>
           </li>
           <li>
             <Link to="/drivers">Drivers</Link>

@@ -7,13 +7,13 @@
 
   .logo {
     display: inline-block;
-    font-size: 25px;
-    font-weight: 600;
-    padding: 25px;
+    margin: 5px;
+    height: 50px;
+    vertical-align: bottom;
   }
 
   ul {
-    display: inline-block;
+    display: inline;
     list-style-type: none;
     margin: 0;
     padding: 0;

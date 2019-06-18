@@ -8,7 +8,7 @@ class Standings extends Component {
   render() {
     return (
       <div>
-        <h2>Standings</h2>
+        <h1>Standings</h1>
 
         <Router>
           <Link to="/standings/driver">
