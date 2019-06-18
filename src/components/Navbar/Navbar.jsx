@@ -16,7 +16,8 @@ class ConnectedNavbar extends Component {
         <img
           className="logo"
           src={
-            process.env.PUBLIC_URL + "/assets/images/f1points_logo_full_2.png"
+            process.env.PUBLIC_URL +
+            "/assets/images/f1points_logo_full_basic.png"
           }
           alt="f1points_logo"
         />
