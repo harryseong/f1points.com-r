@@ -1,4 +1,4 @@
-import { LOAD_DRIVERS, LOAD_CURRENT_DRIVERS } from "../constants/action-types";
+import { LOAD_CURRENT_DRIVERS } from "../constants/action-types";
 
 const initialState = { drivers: [] };
 

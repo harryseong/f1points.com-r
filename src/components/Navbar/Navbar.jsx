@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
+import { AppBar, Toolbar, IconButton, Button } from "@material-ui/core";
 
 const mapStateToProps = state => {
   return {
@@ -12,28 +13,34 @@ const mapStateToProps = state => {
 class ConnectedNavbar extends Component {
   render() {
     return (
-      <nav className="navbar">
-        <img
-          className="logo"
-          src={
-            process.env.PUBLIC_URL +
-            "/assets/images/f1points_logo_full_basic.png"
-          }
-          alt="f1points_logo"
-        />
+      <AppBar position="static">
+        <Toolbar className="navbar">
+          <IconButton edge="start" color="inherit" aria-label="Open drawer">
+            <i className="fas fa-bars" />
+          </IconButton>
 
-        <ul>
-          <li>
-            <Link to="/">Standings</Link>
-          </li>
-          <li>
-            <Link to="/drivers">Drivers</Link>
-          </li>
-          <li>
-            <Link to="/constructors">Constructors</Link>
-          </li>
-        </ul>
-      </nav>
+          <img
+            className="logo"
+            src={
+              process.env.PUBLIC_URL +
+              "/assets/images/f1points_logo_full_basic_shadow.png"
+            }
+            alt="f1points_logo"
+          />
+
+          <Button color="inherit" to="/standings" component={Link}>
+            Standings
+          </Button>
+
+          <Button color="inherit" to="/drivers" component={Link}>
+            Drivers
+          </Button>
+
+          <Button color="inherit" to="/teams" component={Link}>
+            Teams
+          </Button>
+        </Toolbar>
+      </AppBar>
     );
   }
 }

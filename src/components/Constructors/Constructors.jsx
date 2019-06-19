@@ -14,7 +14,7 @@ class ConnectedConstructors extends Component {
 
     return (
       <div>
-        <h1>Constructors</h1>
+        <h1>Teams</h1>
 
         <div className="root">
           <Grid

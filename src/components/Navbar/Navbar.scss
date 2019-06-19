@@ -1,13 +1,13 @@
 @import "../../constants/style-constants.scss";
 
 .navbar {
-  padding: 0 10px;
+  padding: 0 20px;
   background-color: $candyAppleRed;
   color: white;
 
   .logo {
     display: inline-block;
-    padding: 8px 10px;
+    padding: 8px;
     margin-right: 5px;
     height: 40px;
     vertical-align: bottom;
@@ -15,33 +15,5 @@
 
   .logo:hover {
     cursor: pointer;
-  }
-
-  ul {
-    display: inline;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      padding: 5px;
-      display: inline-block;
-      border-bottom: solid $candyAppleRed 2pt;
-      transition: 0.1s;
-
-      a,
-      a:visited {
-        text-decoration: none;
-        text-align: center;
-        font-size: 20px;
-        font-weight: 600;
-        color: white;
-      }
-    }
-
-    li:hover {
-      border-bottom: solid white 2pt;
-      transition: 0.1s;
-    }
   }
 }
