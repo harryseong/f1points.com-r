@@ -19,14 +19,16 @@ class ConnectedNavbar extends Component {
             <i className="fas fa-bars" />
           </IconButton>
 
-          <img
-            className="logo"
-            src={
-              process.env.PUBLIC_URL +
-              "/assets/images/f1points_logo_full_basic_shadow.png"
-            }
-            alt="f1points_logo"
-          />
+          <Link to="/">
+            <img
+              className="logo"
+              src={
+                process.env.PUBLIC_URL +
+                "/assets/images/f1points_logo_full_basic_shadow.png"
+              }
+              alt="f1points_logo"
+            />
+          </Link>
 
           <Button color="inherit" to="/standings" component={Link}>
             Standings

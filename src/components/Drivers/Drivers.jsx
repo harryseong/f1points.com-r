@@ -61,7 +61,7 @@ class ConnectedDrivers extends Component {
                     </div>
                     <div className="driver-dob">
                       {moment(driver.dateOfBirth, "YYYY-MM-DD").format(
-                        "M/DD/YYYY"
+                        "M/D/YYYY"
                       )}{" "}
                       (
                       {Math.floor(

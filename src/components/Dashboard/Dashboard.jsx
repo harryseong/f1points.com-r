@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Standings from "./Standings/Standings";
 
 class Dashboard extends Component {
   render() {
     return (
       <div>
-        <Standings />
+        <h1>Home</h1>
+        <div>This is a test. This site is under construction.</div>
       </div>
     );
   }
