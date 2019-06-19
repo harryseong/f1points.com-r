@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Grid from "@material-ui/core/Grid";
 import "./Drivers.scss";
 import { nationCodes } from "../../constants/nation-codes";
+import { Button } from "@material-ui/core";
 var moment = require("moment");
 
 const mapStateToProps = state => {
@@ -74,14 +75,17 @@ class ConnectedDrivers extends Component {
                       )}
                       )
                     </div>
-                    <div className="driver-more-info-link">
-                      <a href={driver.url} target="_blank_">
-                        More info
-                      </a>
-                    </div>
                   </div>
-
                   <div className="driver-number">#{driver.permanentNumber}</div>
+                  <Button
+                    href={driver.url}
+                    target="_blank_"
+                    className="driver-more-info-btn"
+                  >
+                    <span>
+                      <i className="fas fa-external-link-alt" /> More Info
+                    </span>
+                  </Button>
                 </div>
               </Grid>
             ))}
